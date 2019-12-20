@@ -1,29 +1,29 @@
 @charset "utf-8";
-$m_color: #FE664F;
-$redColor: #F5106E;
-$color333:#333;
-$color999:#999;
-$color666:#666;
-$colorccc:#ccc;
-$colorfff: #FFF;
+$m_color: #fe664f;
+$redColor: #f5106e;
+$color333: #333;
+$color999: #999;
+$color666: #666;
+$colorccc: #ccc;
+$colorfff: #fff;
 $borderColor: #e1e1e1; // default border color
-$lightborderColor:#dcdcdc;
-$bgColor:#fff;
-$width:1200px;
-$mainFontSize:16px;
-.f0_bg{
-  background-color: $bgColor!important;
+$lightborderColor: #dcdcdc;
+$bgColor: #fff;
+$width: 1200px;
+$mainFontSize: 16px;
+.f0_bg {
+  background-color: $bgColor !important;
 }
 
-@mixin wh($w, $h){
+@mixin wh($w, $h) {
   @include px2rem(width, $w);
   @include px2rem(height, $h);
 }
 //
-@mixin px2rem($property, $values,$baseline-rem:75) {
-  $max: length($values);//返回$values列表的长度值
-  $pxValues: '';
-  $remValues: '';
+@mixin px2rem($property, $values, $baseline-rem: 75) {
+  $max: length($values); //返回$values列表的长度值
+  $pxValues: "";
+  $remValues: "";
 
   @for $i from 1 through $max {
     $value: (nth($values, $i));
@@ -34,14 +34,14 @@ $mainFontSize:16px;
     }
   }
 
-//  #{$property}: $pxValues;
+  //  #{$property}: $pxValues;
   #{$property}: $remValues;
 }
-@mixin lh($h, $lh){
+@mixin lh($h, $lh) {
   @include px2rem(height, $h);
   @include px2rem(line-height, $lh);
 }
-@mixin _icon($w, $h, $mt){
+@mixin _icon($w, $h, $mt) {
   @include px2rem(width, $w);
   @include px2rem(height, $h);
   vertical-align: middle;
@@ -52,7 +52,7 @@ $mainFontSize:16px;
     repeat: no-repeat;
     position: center center;
     size: contain;
-  };
+  }
 }
 
 $legacy-support-for-ie: false !default;
@@ -115,13 +115,13 @@ $legacy-support-for-ie: false !default;
 // //  css3 不同浏览器兼容处理
 // //
 //
-@mixin c3($key , $value){
-    -webkit-#{$key}: $value;
-    -moz-#{$key}: $value;
-    -o-#{$key}: $value;
-    #{$key}: $value;
+@mixin c3($key, $value) {
+  -webkit-#{$key}: $value;
+  -moz-#{$key}: $value;
+  -o-#{$key}: $value;
+  #{$key}: $value;
 }
-.boradius{
+.boradius {
   @include px2rem(border-radius, 5);
 }
 //
@@ -132,7 +132,7 @@ $legacy-support-for-ie: false !default;
 // //@mixin inline_box_p{
 // //  font-size: 0;
 // //}
-$inline-block-alignment: middle !default;//设置一个默认的对齐方式
+$inline-block-alignment: middle !default; //设置一个默认的对齐方式
 @mixin display-inline($alignment: $inline-block-alignment) {
   display: inline-block;
   @if $alignment and $alignment != none {
@@ -161,10 +161,10 @@ $inline-block-alignment: middle !default;//设置一个默认的对齐方式
 // //  float 解决IE6下双margin
 // //
 //
-@mixin float($side:left){
+@mixin float($side: left) {
   float: unquote($side);
   @if $legacy-support-for-ie {
-    _display:inline;
+    _display: inline;
   }
 }
 // //左浮动
@@ -268,7 +268,8 @@ $inline-block-alignment: middle !default;//设置一个默认的对齐方式
 //   @include invisible;
 // }
 // //截取文本text-overflow  单行文本
-@mixin singleline-ellipsis($substract:0){//`$substract`单位为%
+@mixin singleline-ellipsis($substract: 0) {
+  //`$substract`单位为%
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -281,7 +282,7 @@ $inline-block-alignment: middle !default;//设置一个默认的对齐方式
 //
 //
 // //多行
-@mixin lines-ellipsis($num){
+@mixin lines-ellipsis($num) {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -504,30 +505,30 @@ $inline-block-alignment: middle !default;//设置一个默认的对齐方式
 //
 //
 //display:flex
- @mixin display_flex($flex: flex){
-   display: -webkit-box;
-   display:-ms-flexbox;
-   display: -webkit-flex;
-   display: -moz-flex;
-   display: -o-flex;
-   display: flex;
-   -webkit-flex-wrap: wrap;
-   -ms-flex-wrap: wrap;
-   flex-wrap: wrap;
- }
- //@mixin flex($num){
- //  -webkit-box-flex: $num;
- //  -webkit-flex: $num;
- //  -ms-flex: $num;
- //  flex: $num;
- //  display: block;
- //  position: relative;
- //  -webkit-flex-basis: 0;
- //  -ms-flex-preferred-size: 0;
- //  flex-basis: 0;
-    //    max-width: 100%;
-    //    width: 0;
- //}
+@mixin display_flex($flex: flex) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+//@mixin flex($num){
+//  -webkit-box-flex: $num;
+//  -webkit-flex: $num;
+//  -ms-flex: $num;
+//  flex: $num;
+//  display: block;
+//  position: relative;
+//  -webkit-flex-basis: 0;
+//  -ms-flex-preferred-size: 0;
+//  flex-basis: 0;
+//    max-width: 100%;
+//    width: 0;
+//}
 
 // @mixin flex-cell($width) {
 //   -webkit-flex-basis: $width;
@@ -616,46 +617,44 @@ $inline-block-alignment: middle !default;//设置一个默认的对齐方式
 // //  }
 // //}
 //
- @mixin bg_opacity($color, $op){
-
-     @if length($color) == 1{    // input color in 16
-         background:$color;
-         filter:alpha(opacity = $op *100);
-         background:rgba($color,$op);
-     }
-
-     @else if length($color) == 3{   // input color in RGB
-         background:rgb(nth($color,1),nth($color,2),nth($color,3));
-         filter:alpha(opacity = $op *100);
-         background:rgba(nth($color,1),nth($color,2),nth($color,3),$op);
-
-     }
- }
+@mixin bg_opacity($color, $op) {
+  @if length($color) == 1 {
+    // input color in 16
+    background: $color;
+    filter: alpha(opacity = $op * 100);
+    background: rgba($color, $op);
+  } @else if length($color) == 3 {
+    // input color in RGB
+    background: rgb(nth($color, 1), nth($color, 2), nth($color, 3));
+    filter: alpha(opacity = $op * 100);
+    background: rgba(nth($color, 1), nth($color, 2), nth($color, 3), $op);
+  }
+}
 //  fe4c40
 
 // //任何手机屏幕上px的统一
 // //px2px(font-size, 32);
-@mixin px2px($name,$px){
-  #{$name}:round($px/2)*1px;
-  [data-dpr = "2"] &{
-    #{$name}:$px*1px;
+@mixin px2px($name, $px) {
+  #{$name}: round($px/2) * 1px;
+  [data-dpr="2"] & {
+    #{$name}: $px * 1px;
   }
-  [data-dpr = "2.5"] &{
-    #{$name}:round($px*2.5/2)*1px;
-  }
-
-  [data-dpr = "2.75"] &{
-    #{$name}:round($px*2.75/2)*1px;
+  [data-dpr="2.5"] & {
+    #{$name}: round($px * 2.5/2) * 1px;
   }
 
-  [data-dpr = "3"] &{
-    #{$name}:round($px*3/2)*1px;
+  [data-dpr="2.75"] & {
+    #{$name}: round($px * 2.75/2) * 1px;
   }
-  [data-dpr = "4"] &{
-    #{$name}:round($px*2)*1px;
+
+  [data-dpr="3"] & {
+    #{$name}: round($px * 3/2) * 1px;
+  }
+  [data-dpr="4"] & {
+    #{$name}: round($px * 2) * 1px;
   }
 }
 
-@mixin font-dpr($px){
-  @include  px2px(font-size,$px)
+@mixin font-dpr($px) {
+  @include px2px(font-size, $px);
 }

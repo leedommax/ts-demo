@@ -3,7 +3,7 @@
 
 // 弹窗默认样式
 .credit_mark_div {
-  position:fixed;
+  position: fixed;
   top: 0;
   bottom: 0;
   width: 100%;
@@ -13,8 +13,8 @@
     top: 0;
     bottom: 0;
     width: 100%;
-    background:rgba(0,0,0,0.5);
-    box-shadow:0px 0px .2133rem 0px rgba(220,220,220,1);
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 0.2133rem 0px rgba(220, 220, 220, 1);
   }
   main {
     background: #fff;
@@ -26,18 +26,18 @@
   }
 }
 input:-ms-input-placeholder {
-  color: #BEBEBE;
+  color: #bebebe;
 }
 input::-webkit-input-placeholder {
-  color: #BEBEBE;
+  color: #bebebe;
 }
 input::-moz-placeholder {
-  color: #BEBEBE;
+  color: #bebebe;
 }
 input:-moz-placeholder {
-  color: #BEBEBE;
+  color: #bebebe;
 }
-.credit_mock{
+.credit_mock {
   position: absolute;
   width: 100%;
   height: 100%;

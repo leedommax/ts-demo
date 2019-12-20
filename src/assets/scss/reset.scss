@@ -45,23 +45,23 @@
 .c_333 {
   color: #333;
 }
-.c_da{
-  color: #DADADA;
+.c_da {
+  color: #dadada;
 }
 .tc {
   text-align: center;
 }
-.tr{
+.tr {
   text-align: right;
 }
 //兼容各个手机边框线粗细问题
-.border_box_torb{
+.border_box_torb {
   height: 1px;
   width: 100%;
   background: $borderColor;
   clear: both;
 }
-.border_box_lorr{
+.border_box_lorr {
   height: 100%;
   width: 1px;
   background: $borderColor;
@@ -91,14 +91,17 @@
   -ms-flex-pack: center;
   justify-content: center;
 }
-.vertical{
+.vertical {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
 }
-.flex, .flex *, .flex:after, .flex:before {
+.flex,
+.flex *,
+.flex:after,
+.flex:before {
   box-sizing: border-box;
 }
 .flex > .cell_0 {
@@ -150,43 +153,45 @@
   min-height: 100%;
 }
 
-.stick_footer, .stick_main {
+.stick_footer,
+.stick_main {
   width: 100%;
 }
-html, body {
+html,
+body {
   height: 100%;
   min-height: 100%;
   background: $bgColor;
   // @include font-dpr(36);
 }
-.maxHeight{
+.maxHeight {
   height: 100%;
   min-height: 100%;
 }
-.top_go{
-  @include px2rem(width,97);
-  @include px2rem(height,97);
+.top_go {
+  @include px2rem(width, 97);
+  @include px2rem(height, 97);
   position: fixed;
   z-index: 33;
-  @include px2rem(right,10);
-  @include px2rem(bottom,120);
+  @include px2rem(right, 10);
+  @include px2rem(bottom, 120);
   text-align: center;
 }
 // 按钮样式
-.mt30{
+.mt30 {
   @include px2rem(margin-top, 30);
 }
-.mg{
+.mg {
   @include px2rem(margin, 30 0);
 }
-.buttonStyle{
-  @include btnCss(690, 88, #F5106E, #fff);
-  &.disableStyle{
-    background: #DADADA;
+.buttonStyle {
+  @include btnCss(690, 88, #f5106e, #fff);
+  &.disableStyle {
+    background: #dadada;
   }
 }
 //暂无数据友好提示
-.nodata_box{
+.nodata_box {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -194,18 +199,18 @@ html, body {
   -moz-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
-  img{
+  img {
     display: block;
-    @include px2rem(width,300);
+    @include px2rem(width, 300);
   }
-  .font_text{
+  .font_text {
     @include font-dpr(28);
     line-height: 1.1;
     @include px2rem(margin, 50 0 20);
   }
-  .add_new{
-    @include px2rem(width,200);
-    @include px2rem(height,50);
+  .add_new {
+    @include px2rem(width, 200);
+    @include px2rem(height, 50);
     @include px2rem(border-radius, 30);
     background: $redColor;
     @include font-dpr(24);
@@ -213,26 +218,26 @@ html, body {
   }
 }
 // 提示信息样式
-.prompt_txts{
-  background: #FFF8E8;
+.prompt_txts {
+  background: #fff8e8;
   @include px2rem(padding, 12 30);
   line-height: 1.5;
-  color: #FAA61A;
+  color: #faa61a;
 }
-.position{
-  position: fixed!important;
+.position {
+  position: fixed !important;
   z-index: 999;
   left: 0;
   top: 0;
   width: 100%;
 }
-.content-offset{
+.content-offset {
   @include px2rem(padding-top, 89);
 }
-.content-offset-bottom{
+.content-offset-bottom {
   @include px2rem(padding-bottom, 104);
 }
-.maxHeight{
+.maxHeight {
   height: 100%;
   min-height: 100%;
 }
