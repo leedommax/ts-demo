@@ -1,0 +1,38 @@
+@charset "utf-8";
+@import "app";
+
+//按钮通用样式
+@mixin btnCss($w,$h,$bjc,$fc){
+  @include wh($w,$h);
+  @include px2rem(line-height,$h);
+  margin: 0 auto;
+  // @include px2rem(margin-top,$mt);
+  background: $bjc;
+  color:$fc;
+  @include px2rem(border-radius, 10);
+  display:block;
+  @include font-dpr(32);
+  text-align: center;
+  overflow: hidden;
+}
+.credit_btn, .credit_disbtn {
+  height: 1.2rem;
+  line-height: 1.2rem;
+  border-radius: .6133rem;
+  margin-left: .5333rem;
+  margin-right: .5333rem;
+  font-size: .4267rem;
+  text-align: center;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:500;
+  color:rgba(255,255,255,1);
+}
+.credit_btn {
+  background:rgba(253,104,125,1);
+  box-shadow:0px .1333rem .4rem 0px rgba(253,104,125,0.3);
+}
+.credit_disbtn {
+  background: #D1D1D1 !important;
+  box-shadow:0px .1333rem .4rem 0px rgba(209,209,209,0.3);
+}
+
